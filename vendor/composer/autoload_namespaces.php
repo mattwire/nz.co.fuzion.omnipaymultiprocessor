@@ -9,6 +9,7 @@ return array(
     'Omnipay\\Tests\\' => array($vendorDir . '/omnipay/tests/src'),
     'Omnipay\\Skrill\\' => array($vendorDir . '/alfaproject/omnipay-skrill/src'),
     'Omnipay\\Common\\' => array($vendorDir . '/omnipay/common/src'),
+    'Omnipay\\BarclaysEpdq\\' => array($vendorDir . '/samvaughton/omnipay-barclays-epdq/src'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'Guzzle\\Tests' => array($vendorDir . '/guzzle/guzzle/tests'),
     'Guzzle' => array($vendorDir . '/guzzle/guzzle/src'),

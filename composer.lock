@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ecb901a32e2e812e265ee2d7bea9794",
-    "content-hash": "2842ff52056a469f2a0da8ef4a6dbb83",
+    "hash": "da22766c62affbf0cf433b5cd202cc33",
+    "content-hash": "c569c97c09e54927698f13ac80f537af",
     "packages": [
         {
             "name": "alfaproject/omnipay-skrill",
@@ -193,12 +193,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "71c5ccec1b04649c26b7fa510b1cc6b811cb3fb9"
+                "reference": "a2dec96198bb146ffead806700074b0ec8d07f2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/71c5ccec1b04649c26b7fa510b1cc6b811cb3fb9",
-                "reference": "71c5ccec1b04649c26b7fa510b1cc6b811cb3fb9",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/a2dec96198bb146ffead806700074b0ec8d07f2f",
+                "reference": "a2dec96198bb146ffead806700074b0ec8d07f2f",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-12-02 14:05:09"
+            "time": "2017-02-01 09:18:35"
         },
         {
             "name": "guzzle/guzzle",
@@ -440,7 +440,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eileenmcnaughton/omnipay-authorizenet.git",
-                "reference": "a955beac72955c8077229728d64069f0061315d1"
+                "reference": "1d253e5c2c569a92bbd75e9a97053aaee7d15bba"
             },
             "require": {
                 "omnipay/common": "~2.2"
@@ -484,7 +484,7 @@
                 "pay",
                 "payment"
             ],
-            "time": "2016-12-08 03:09:41"
+            "time": "2016-12-08 20:33:39"
         },
         {
             "name": "omnipay/bitpay",
@@ -1064,16 +1064,16 @@
         },
         {
             "name": "omnipay/manual",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-manual.git",
-                "reference": "db31b81dc3a9ccbc61a805dd9f922b7bfd0eb0e9"
+                "reference": "d896909093422f25a9deec13232b31ea69a72994"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-manual/zipball/db31b81dc3a9ccbc61a805dd9f922b7bfd0eb0e9",
-                "reference": "db31b81dc3a9ccbc61a805dd9f922b7bfd0eb0e9",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-manual/zipball/d896909093422f25a9deec13232b31ea69a72994",
+                "reference": "d896909093422f25a9deec13232b31ea69a72994",
                 "shasum": ""
             },
             "require": {
@@ -1117,7 +1117,7 @@
                 "pay",
                 "payment"
             ],
-            "time": "2016-03-29 17:52:49"
+            "time": "2016-12-28 03:02:15"
         },
         {
             "name": "omnipay/migs",
@@ -1697,16 +1697,16 @@
         },
         {
             "name": "omnipay/paypal",
-            "version": "v2.6.2",
+            "version": "v2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-paypal.git",
-                "reference": "0f894c67112424e6259eb59f42ea35d4188b67e2"
+                "reference": "e06c8814deacc793715bb9fd3fcae5995b5d8d6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-paypal/zipball/0f894c67112424e6259eb59f42ea35d4188b67e2",
-                "reference": "0f894c67112424e6259eb59f42ea35d4188b67e2",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-paypal/zipball/e06c8814deacc793715bb9fd3fcae5995b5d8d6b",
+                "reference": "e06c8814deacc793715bb9fd3fcae5995b5d8d6b",
                 "shasum": ""
             },
             "require": {
@@ -1751,7 +1751,7 @@
                 "paypal",
                 "purchase"
             ],
-            "time": "2016-10-18 01:32:46"
+            "time": "2016-12-22 12:35:25"
         },
         {
             "name": "omnipay/pin",
@@ -1928,16 +1928,16 @@
         },
         {
             "name": "omnipay/stripe",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-stripe.git",
-                "reference": "6eab75f838e11e2c951af52cf3939aeb37d11059"
+                "reference": "50bdec8d7d1562c52dd56928243be4a04bcf20e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-stripe/zipball/6eab75f838e11e2c951af52cf3939aeb37d11059",
-                "reference": "6eab75f838e11e2c951af52cf3939aeb37d11059",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-stripe/zipball/50bdec8d7d1562c52dd56928243be4a04bcf20e6",
+                "reference": "50bdec8d7d1562c52dd56928243be4a04bcf20e6",
                 "shasum": ""
             },
             "require": {
@@ -1981,7 +1981,7 @@
                 "payment",
                 "stripe"
             ],
-            "time": "2016-09-14 09:11:40"
+            "time": "2016-12-15 09:42:45"
         },
         {
             "name": "omnipay/targetpay",
@@ -2142,6 +2142,69 @@
             "time": "2015-11-23 06:43:40"
         },
         {
+            "name": "samvaughton/omnipay-barclays-epdq",
+            "version": "2.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samvaughton/omnipay-barclays-epdq.git",
+                "reference": "736b0ad83e905c59500d40dc41d3ea2e49c8dee0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samvaughton/omnipay-barclays-epdq/zipball/736b0ad83e905c59500d40dc41d3ea2e49c8dee0",
+                "reference": "736b0ad83e905c59500d40dc41d3ea2e49c8dee0",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "~2.0"
+            },
+            "require-dev": {
+                "omnipay/tests": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Omnipay\\BarclaysEpdq\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Macneil",
+                    "email": "adrian@adrianmacneil.com"
+                },
+                {
+                    "name": "Sam Vaughton",
+                    "email": "samvaughton@gmail.com"
+                },
+                {
+                    "name": "Omnipay Contributors",
+                    "homepage": "https://github.com/samvaughton/omnipay-barclays-epdq/graphs/contributors"
+                }
+            ],
+            "description": "Barclays ePDQ driver for the Omnipay payment processing library.",
+            "homepage": "https://github.com/samvaughton/omnipay-barclays-epdq",
+            "keywords": [
+                "barclays",
+                "epdq",
+                "gateway",
+                "merchant",
+                "omnipay",
+                "pay",
+                "payment"
+            ],
+            "abandoned": "digitickets/omnipay-barclays-epdq",
+            "time": "2016-10-12 15:09:24"
+        },
+        {
             "name": "sergej-koscejev/omnipay-gopay",
             "version": "dev-master",
             "source": {
@@ -2193,12 +2256,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "25c576abd4e0f212e678fe8b2bd9a9a98c7ea934"
+                "reference": "74877977f90fb9c3e46378d5764217c55f32df34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/25c576abd4e0f212e678fe8b2bd9a9a98c7ea934",
-                "reference": "25c576abd4e0f212e678fe8b2bd9a9a98c7ea934",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/74877977f90fb9c3e46378d5764217c55f32df34",
+                "reference": "74877977f90fb9c3e46378d5764217c55f32df34",
                 "shasum": ""
             },
             "require": {
@@ -2245,7 +2308,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-13 01:43:15"
+            "time": "2017-01-02 20:30:24"
         },
         {
             "name": "symfony/http-foundation",
@@ -2253,12 +2316,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "216c111ac427f5f773c6a8bfc0c15f0a7dd74876"
+                "reference": "2f5eaf2f79368f702e2c65fb361733bd457fb1b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/216c111ac427f5f773c6a8bfc0c15f0a7dd74876",
-                "reference": "216c111ac427f5f773c6a8bfc0c15f0a7dd74876",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/2f5eaf2f79368f702e2c65fb361733bd457fb1b8",
+                "reference": "2f5eaf2f79368f702e2c65fb361733bd457fb1b8",
                 "shasum": ""
             },
             "require": {
@@ -2300,7 +2363,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-27 04:20:28"
+            "time": "2017-02-16 22:43:37"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2534,12 +2597,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "65d4ca18e15cb02eeb1e5336f884e46b9b905be0"
+                "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/65d4ca18e15cb02eeb1e5336f884e46b9b905be0",
-                "reference": "65d4ca18e15cb02eeb1e5336f884e46b9b905be0",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
+                "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
                 "shasum": ""
             },
             "require": {
@@ -2591,7 +2654,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2016-09-30 12:09:40"
+            "time": "2017-02-09 13:29:38"
         },
         {
             "name": "omnipay/tests",
@@ -3104,12 +3167,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "befb26a3713c97af90d25dd12e75621ef14d91ff"
+                "reference": "596bf28684d3176065bb19300c55a9e67ae1e382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/befb26a3713c97af90d25dd12e75621ef14d91ff",
-                "reference": "befb26a3713c97af90d25dd12e75621ef14d91ff",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/596bf28684d3176065bb19300c55a9e67ae1e382",
+                "reference": "596bf28684d3176065bb19300c55a9e67ae1e382",
                 "shasum": ""
             },
             "require": {
@@ -3145,7 +3208,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-14 16:15:57"
+            "time": "2017-02-16 22:43:37"
         }
     ],
     "aliases": [],

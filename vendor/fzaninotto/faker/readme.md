@@ -187,10 +187,10 @@ Each of the generator properties (like `name`, `address`, and `lorem`) are calle
     time($format = 'H:i:s', $max = 'now') // '20:49:42'
     dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = date_default_timezone_get()) // DateTime('2003-03-15 02:00:49', 'Africa/Lagos')
     dateTimeInInterval($startDate = '-30 years', $interval = '+ 5 days', $timezone = date_default_timezone_get()) // DateTime('2003-03-15 02:00:49', 'Antartica/Vostok')
-    dateTimeThisCentury($max = 'now')     // DateTime('1915-05-30 19:28:21')
-    dateTimeThisDecade($max = 'now')      // DateTime('2007-05-29 22:30:48')
-    dateTimeThisYear($max = 'now')        // DateTime('2011-02-27 20:52:14')
-    dateTimeThisMonth($max = 'now')       // DateTime('2011-10-23 13:46:23')
+    dateTimeThisCentury($max = 'now', $timezone = date_default_timezone_get())     // DateTime('1915-05-30 19:28:21', 'UTC')
+    dateTimeThisDecade($max = 'now', $timezone = date_default_timezone_get())      // DateTime('2007-05-29 22:30:48', 'Europe/Paris')
+    dateTimeThisYear($max = 'now', $timezone = date_default_timezone_get())        // DateTime('2011-02-27 20:52:14', 'Africa/Lagos')
+    dateTimeThisMonth($max = 'now', $timezone = date_default_timezone_get())       // DateTime('2011-10-23 13:46:23', 'Antarctica/Vostok')
     amPm($max = 'now')                    // 'pm'
     dayOfMonth($max = 'now')              // '04'
     dayOfWeek($max = 'now')               // 'Friday'
@@ -394,7 +394,7 @@ You can check available Faker locales in the source code, [under the `Provider` 
 
 ## Populating Entities Using an ORM or an ODM
 
-Faker provides adapters for Object-Relational and Object-Document Mappers (currently, [Propel](http://www.propelorm.org), [Doctrine2](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/), [CakePHP](http://cakephp.org), [Spot2](https://github.com/vlucas/spot2) and [Mandango](https://github.com/mandango/mandango) are supported). These adapters ease the population of databases through the Entity classes provided by an ORM library (or the population of document stores using Document classes provided by an ODM library).
+Faker provides adapters for Object-Relational and Object-Document Mappers (currently, [Propel](http://www.propelorm.org), [Doctrine2](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/), [CakePHP](http://cakephp.org), [Spot2](https://github.com/vlucas/spot2), [Mandango](https://github.com/mandango/mandango) and [Eloquent](https://laravel.com/docs/master/eloquent) are supported). These adapters ease the population of databases through the Entity classes provided by an ORM library (or the population of document stores using Document classes provided by an ODM library).
 
 To populate entities, create a new populator class (using a generator instance as parameter), then list the class and number of all the entities that must be generated. To launch the actual data population, call the `execute()` method.
 
@@ -931,6 +931,27 @@ echo $faker->dni; // '77446565E'
 echo $faker->vat;           // "A35864370"
 ```
 
+### `Faker\Provider\fi_FI\Payment`
+
+```php
+<?php
+
+// Generates a random bank account number
+echo $faker->bankAccountNumber; // "FI8350799879879616"
+```
+
+### `Faker\Provider\fi_FI\Person`
+
+```php
+<?php
+
+//Generates a valid Finnish personal identity number (in Finnish - Henkilötunnus)
+echo $faker->personalIdentityNumber() // '170974-007J'
+
+//Since the numbers are different for male and female persons, optionally you can specify gender.
+echo $faker->personalIdentityNumber(\DateTime::createFromFormat('Y-m-d', '2015-12-14'), 'female') // '141215A520B'
+```
+
 ### `Faker\Provider\fr_BE\Payment`
 
 ```php
@@ -968,6 +989,15 @@ echo $faker->siren; // 082 250 104
 
 // Generates a random SIRET number
 echo $faker->siret; // 347 355 708 00224
+```
+
+### `Faker\Provider\fr_FR\Person`
+
+```php
+<?php
+
+// Generates a random NIR / Sécurité Sociale number
+echo $faker->nir; // 1 88 07 35 127 571 - 19
 ```
 
 ### `Faker\Provider\he_IL\Payment`
@@ -1352,6 +1382,25 @@ echo $faker->personalIdentityNumber('female') // '950910-0781'
 echo $faker->bank; // '中国建设银行'
 ```
 
+### `Faker\Provider\zh_TW\Person`
+
+```php
+<?php
+
+// Generates a random personal identify number
+echo $faker->personalIdentityNumber; // A223456789
+```
+
+### `Faker\Provider\zh_TW\Company`
+
+```php
+<?php
+
+// Generates a random VAT / Company Tax number
+echo $faker->VAT; //23456789
+```
+
+
 ## Third-Party Libraries Extending/Based On Faker
 
 * Symfony2 bundles:
@@ -1372,6 +1421,7 @@ echo $faker->bank; // '中国建设银行'
 * [CakePHP 2.x Fake Seeder Plugin](https://github.com/ravage84/cakephp-fake-seeder) A CakePHP 2.x shell to seed your database with fake and/or fixed data.
 * [images-generator](https://github.com/bruceheller/images-generator): An image generator provider using GD for placeholder type pictures
 * [pattern-lab/plugin-php-faker](https://github.com/pattern-lab/plugin-php-faker): Pattern Lab is a Styleguide, Component Library, and Prototyping tool. This creates unique content each time Pattern Lab is generated.
+* [guidocella/eloquent-populator](https://github.com/guidocella/eloquent-populator): Adapter for Laravel's Eloquent ORM.
 
 ## License
 

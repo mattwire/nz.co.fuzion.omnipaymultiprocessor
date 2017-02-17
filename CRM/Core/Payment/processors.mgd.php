@@ -425,4 +425,21 @@ return array(
       'payment_type' => 1,
     ),
   ),
+  16 => array(
+    'name' => 'OmniPay - BarclaysEpdq\Essential',
+    'entity' => 'payment_processor_type',
+    'params' => array(
+      'version' => 3,
+      'title' => 'OmniPay - BarclaysEpdq Essential',
+      'name' => 'omnipay_BarclaysEpdq\Essential',
+      'description' => 'Omnipay OmniPay - BarclaysEpdq Essential',
+      'user_name_label' => 'ClientId',
+      'password_label' => 'ShaIn',
+      'class_name' => 'Payment_OmnipayMultiProcessor',
+      'url_site_default' => 'http://unused.com',
+      'url_api_default' => 'http://unused.com',
+      'billing_mode' => 4,
+      'payment_type' => 1,
+    ),
+  ),
 );

@@ -37,7 +37,8 @@
         "pointybeard/omnipay-nabtransact": "dev-transact",
         "fzaninotto/faker": "^1.6@dev",
         "omnipay/paymentexpress": "dev-master",
-        "omnipay/authorizenet": "dev-master"
+        "omnipay/authorizenet": "dev-master",
+        "samvaughton/omnipay-barclays-epdq": "~2.0"
     },
     "require-dev":
     {
