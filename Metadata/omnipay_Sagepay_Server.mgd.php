@@ -74,6 +74,7 @@ return [
       'ipn_processing_delay' => 0,
       // See https://github.com/thephpleague/omnipay-sagepay/pull/154
       'pass_through_fields' => ['billingForShipping' => 1],
+      'notification_from_different_session' => TRUE,
     ],
     'params' =>
       [
@@ -86,6 +87,7 @@ return [
         'class_name' => 'Payment_OmnipayMultiProcessor',
         'billing_mode' => 4,
         'payment_type' => 3,
+        'is_recur' => 1,
       ],
   ],
 ];
