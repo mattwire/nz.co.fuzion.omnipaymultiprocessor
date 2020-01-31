@@ -92,7 +92,7 @@ return [
         'class_name' => 'Payment_OmnipayMultiProcessor',
         'billing_mode' => 4,
         'payment_type' => 3,
-        'is_recur' => 0,
+        'is_recur' => 1,
       ],
   ],
 ];
