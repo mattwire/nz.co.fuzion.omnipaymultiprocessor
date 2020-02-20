@@ -35,7 +35,6 @@ use Omnipay\Common\Http\Client;
 use GuzzleHttp\Client as GuzzleClient;
 use Http\Adapter\Guzzle6\Client as HttpPlugClient;
 
-
 /**
  * Class CRM_Core_Payment_OmnipayMultiProcessor.
  */

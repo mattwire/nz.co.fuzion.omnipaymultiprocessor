@@ -46,7 +46,6 @@ trait SagepayTestTrait {
     return '0e28675d3513bdfba43fca5';
   }
 
-
   protected function getNewTransaction(): array {
     return [
       'amount' => 20.00,
