@@ -80,6 +80,7 @@ return [
       // See https://github.com/thephpleague/omnipay-sagepay/pull/154
       'pass_through_fields' => ['billingForShipping' => 1],
       'notification_from_different_session' => TRUE,
+      'continuous_authority' => TRUE,
     ],
     'params' =>
       [
