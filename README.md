@@ -2,6 +2,11 @@
 
 This extension provides support for multiple payment processors in CiviCRM.
 
+## MJW Version
+
+* Improved paypal checkout support (requires mjwshared library) (paypal_fixes branch).
+* Improved sagepay support via `sagepay_recur` branch rebased from https://github.com/elcapo/nz.co.fuzion.omnipaymultiprocessor/tree/sagepay_recur.
+
 ## Supported processors
 
 The following payment processors are supported:
