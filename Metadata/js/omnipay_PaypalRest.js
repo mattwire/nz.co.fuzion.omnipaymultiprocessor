@@ -20,18 +20,18 @@
             '[type="submit"].cancel',
             '[type="submit"].webform-previous'
           ).on('click', function () {
-            CRM.payment.debugging(scriptName, 'adding submitdontprocess: ' + this.id);
+            CRM.payment.debugging(script.name, 'adding submitdontprocess: ' + this.id);
             CRM.payment.form.dataset.submitdontprocess = 'true';
           });
 
           $(CRM.payment.getBillingSubmit()).on('click', function () {
-            CRM.payment.debugging(scriptName, 'clearing submitdontprocess');
+            CRM.payment.debugging(script.name, 'clearing submitdontprocess');
             CRM.payment.form.dataset.submitdontprocess = 'false';
           });
 
           $(CRM.payment.form).on('submit', function (event) {
             if (CRM.payment.form.dataset.submitdontprocess === 'true') {
-              CRM.payment.debugging(scriptName, 'non-payment submit detected - not submitting payment');
+              CRM.payment.debugging(script.name, 'non-payment submit detected - not submitting payment');
               event.preventDefault();
               return true;
             }
@@ -39,7 +39,7 @@
               document.getElementById('PayerID') && (document.getElementById('PayerID').value !== 'Payer ID')) {
               return true;
             }
-            CRM.payment.debugging(scriptName, 'Unable to submit - paypal not executed');
+            CRM.payment.debugging(script.name, 'Unable to submit - paypal not executed');
             event.preventDefault();
             return true;
           });
@@ -149,7 +149,7 @@
         },
 
         onError: function (err) {
-          CRM.payment.debugging(scriptName, err);
+          CRM.payment.debugging(script.name, err);
           alert('Site is not correctly configured to process payments');
         }
 
