@@ -79,7 +79,7 @@ return [
       'is_recur' => 1,
     ],
     'metadata' => [
-      'suppress_submit_button' => 1,
+      'suppress_submit_button' => 0,
       'supports_preapproval' => 1,
       'fields' => ['billing_fields' => []],
       'payment_fields' => ['payment_token', 'PayerID', 'post_authorize'],
