@@ -118,14 +118,13 @@
             CRM.payment.debugging(script.name, 'clearing submitdontprocess');
             CRM.payment.form.dataset.submitdontprocess = 'false';
           });
+        },
 
-          // Set up the buttons.
-          if ($(CRM.payment.form).valid()) {
-            actions.enable();
+        onClick: function (data, actions) {
+          if (!CRM.payment.validateForm()) {
+            return actions.reject();
           }
-          else {
-            actions.disable();
-          }
+          return actions.resolve();
         },
 
         createBillingAgreement: function (data, actions) {
