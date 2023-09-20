@@ -67,6 +67,12 @@
         return true;
       }
 
+      var totalAmount = CRM.payment.getTotalAmount();
+      if (totalAmount === 0.0) {
+        script.debugging("Total amount is 0");
+        return CRM.payment.doStandardFormSubmit();
+      }
+
       CRM.payment.debugging(script.name, 'Unable to submit - paypal not executed');
       return true;
     },
@@ -113,6 +119,11 @@
             $('[type="submit"].webform-submit').hide();
           }
           $(CRM.payment.getBillingSubmit()).hide();
+          var totalAmount = CRM.payment.getTotalAmount();
+          if (totalAmount === 0.0) {
+            script.debugging("Total amount is 0");
+            $(CRM.payment.getBillingSubmit()).show();
+          }
 
           $(CRM.payment.getBillingSubmit()).on('click', function () {
             CRM.payment.debugging(script.name, 'clearing submitdontprocess');
