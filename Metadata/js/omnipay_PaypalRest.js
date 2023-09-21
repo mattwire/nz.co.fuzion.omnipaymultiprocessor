@@ -125,6 +125,23 @@
             $(CRM.payment.getBillingSubmit()).show();
           }
 
+          CRM.payment.form.addEventListener('change', function() {
+            // Reset submit button visibility on change
+            if (CRM.payment.getTotalAmount() === 0.0) {
+              script.debugging("Total amount is 0");
+              CRM.payment.getBillingSubmit()
+                .forEach(function (currentValue, currentIndex, listObj) {
+                  currentValue.style.display = 'initial';
+                });
+            }
+            else {
+              CRM.payment.getBillingSubmit()
+                .forEach(function (currentValue, currentIndex, listObj) {
+                  currentValue.style.display = 'none';
+                });
+            }
+          });
+
           $(CRM.payment.getBillingSubmit()).on('click', function () {
             CRM.payment.debugging(script.name, 'clearing submitdontprocess');
             CRM.payment.form.dataset.submitdontprocess = 'false';
