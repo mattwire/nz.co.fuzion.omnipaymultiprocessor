@@ -156,25 +156,7 @@
         },
 
         createBillingAgreement: function (data, actions) {
-          // CRM.payment.getTotalAmount is implemented by webform_civicrm and mjwshared. The plan is to
-          //   add CRM.payment.getTotalAmount() into CiviCRM core. This code allows it to work under any of
-          //   these circumstances as well as if CRM.payment does not exist.
-          var totalAmount = 0.0;
-          if ((typeof CRM.payment !== 'undefined') && (CRM.payment.hasOwnProperty('getTotalAmount'))) {
-            totalAmount = CRM.payment.getTotalAmount();
-          }
-          else
-            if (typeof calculateTotalFee == 'function') {
-              // This is ONLY triggered in the following circumstances on a CiviCRM contribution page:
-              // - With a priceset that allows a 0 amount to be selected.
-              // - When we are the ONLY payment processor configured on the page.
-              totalAmount = parseFloat(calculateTotalFee());
-            }
-            else
-              if (document.getElementById('total_amount')) {
-                // The input#total_amount field exists on backend contribution forms
-                totalAmount = parseFloat(document.getElementById('total_amount').value);
-              }
+          var totalAmount = CRM.payment.getTotalAmount();
 
           var frequencyInterval = $('#frequency_interval').val() || 1;
           var frequencyUnit = $('#frequency_unit')
