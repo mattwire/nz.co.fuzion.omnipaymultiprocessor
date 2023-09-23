@@ -114,6 +114,7 @@
       paypal.Buttons({
 
         onInit: function (data, actions) {
+          CRM.payment.debugging(script.name, 'paypal.onInit');
           // On webform, hide the submit button as it's triggered automatically
           if (CRM.$('[type="submit"].webform-submit').length !== 0) {
             $('[type="submit"].webform-submit').hide();
@@ -149,6 +150,7 @@
         },
 
         onClick: function (data, actions) {
+          CRM.payment.debugging(script.name, 'paypal.onClick');
           if (!CRM.payment.validateForm()) {
             return actions.reject();
           }
@@ -156,6 +158,7 @@
         },
 
         createBillingAgreement: function (data, actions) {
+          CRM.payment.debugging(script.name, 'paypal.createBillingAgreement');
           var totalAmount = CRM.payment.getTotalAmount();
 
           var frequencyInterval = $('#frequency_interval').val() || 1;
@@ -194,6 +197,7 @@
         },
 
         onApprove: function (data, actions) {
+          CRM.payment.debugging(script.name, 'paypal.onApprove');
           var isRecur = 1;
           var paymentToken = data.billingToken;
           if (!paymentToken) {
@@ -201,7 +205,7 @@
             isRecur = 0;
           }
 
-          document.getElementById('paypal-button-container').style.visibility = "hidden";
+          document.getElementById('paypal-button-container').style.display = 'none';
           var crmSubmitButtons = document.getElementById('crm-submit-buttons');
           if (crmSubmitButtons) {
             crmSubmitButtons.style.display = 'block';
@@ -209,10 +213,11 @@
           document.getElementById('PayerID').value = data.payerID;
           document.getElementById('payment_token').value = paymentToken;
 
-          CRM.$(CRM.payment.getBillingSubmit()).click();
+          CRM.payment.form.submit();
         },
 
         onError: function (err) {
+          CRM.payment.debugging(script.name, 'paypal.onError');
           CRM.payment.debugging(script.name, err);
           alert('Site is not correctly configured to process payments');
         }
