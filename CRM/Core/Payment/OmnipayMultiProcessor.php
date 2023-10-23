@@ -340,7 +340,6 @@ class CRM_Core_Payment_OmnipayMultiProcessor extends CRM_Core_Payment_PaymentExt
       'paymentProcessorId' => $this->_paymentProcessor['id'],
       'currency' => $form->getCurrency(),
       'is_test' => $this->_is_test,
-      'title' => $form->getTitle(),
     ];
     $clientSideCredentials = $this->getProcessorTypeMetadata('client_side_credentials');
     if ($clientSideCredentials) {

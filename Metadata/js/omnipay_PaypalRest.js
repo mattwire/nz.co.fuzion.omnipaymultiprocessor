@@ -179,7 +179,7 @@
                 'installments': $('#installments').val(),
                 'frequency_unit': frequencyUnit,
                 'frequency_interval': frequencyInterval,
-                'description': CRM.vars.omnipay.title + ' ' + CRM.formatMoney(totalAmount) + recurText,
+                'description': document.title + ' ' + CRM.formatMoney(totalAmount) + recurText,
               }
             ).then(function (result) {
               if (result.is_error === 1) {
